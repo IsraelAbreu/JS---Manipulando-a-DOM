@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+	
+	<div class="container">
+		<h1 id="tituloPrincipal">Olá, seja bem vindo</h1>
+		<button class="btn btn-danger" id="btn-titulo">Mudar Titulo</button>
+		<p class="intro" id="intro">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit facilis rem eligendi tempora ipsam, illum suscipit modi! Ullam excepturi officia ipsa sequi sunt consectetur natus cupiditate, unde maiores quas vero.
+		</p>
+
+		<form id="form-login" onsubmit="return validarForm()">
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label" name="email">Email address</label>
+				<input type="email" class="form-control" id="form-email" aria-describedby="emailHelp" name="email">
+				<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputPassword1" class="form-label">Password</label>
+				<input type="password" class="form-control" id="form-password">
+			</div>
+			<div class="mb-3 form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">Check me out</label>
+			</div>
+			<!--Manipulando a DOM direto na tag HTML-->
+			<button type="submit" class="btn btn-primary" onclick="document.getElementById('intro').style.color='red'">Submit</button>
+		</form>
+		<h2>Minha primeira Animação</h2>
+		<div id="container-animation">
+
+			<div id="animation"></div>
+			
+		</div>
+		<p><button class="btn btn-info" onclick="myMove()">Click Me</button></p>
+	</div>
+
+	<section class="dataHora"></section>
+
+	<!--link JS-->
+	<script src="/main.js"></script>
+</body>
+</html>
